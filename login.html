@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Login</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+
+<body style="background-color:#FFE4B5; font-family: georgia">
+  <div class="container">
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+      <div class="col-xl-10 col-lg-12 col-md-9">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="pl-5 pb-3 pr-1">
+                  <div class="text-center">
+                    <br>
+                    <br><br><br>
+                    <h1 class="h2 text-gray-900 mb-4"><b>Welcome Back!</b></h1>
+                  </div>
+                  <form class="user" action="login.php" method="post">
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" name="username" placeholder="Enter your username" required>
+                    </div>
+                      <!--<label id="e" style="color: red; visibility: hidden;">Invalid Email.</label>-->
+                    <div class="form-group" pt-1>
+                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password" required>
+                    </div>
+                      <label id="pvalid" style="color: red; visibility: hidden;">Invalid Password.</label>
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox small">
+                        <input type="checkbox" class="custom-control-input" id="customCheck">
+                        <label class="custom-control-label" for="customCheck">Remember Me</label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-user btn-block" id="btn-login" type="submit">
+                      <h5>Login</h5></button>
+                      </form>
+                    
+                   <hr>
+                    <a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser" class="btn btn-danger btn-user btn-block">
+                      Continue with Google
+                    </a>
+                  
+                  <hr>
+                  <div class="text-center">
+                    <a href=""class="large">Forgot Password?</a>
+                  </div>
+                  <div class="text-center mt-3">
+                      New to Food Mania?
+                    <a class="large btn-sm text-light btn-user btn-secondary" href="register.html"> Create an Account!</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block bg-login-image" >
+                <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"height="600" width="450" />
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+    
+    var e1 = document.getElementById("exampleInputEmail");
+            e1.addEventListener('keyup',function(){
+                if(email(e1.value))
+                {
+                    exampleInputEmail.style.border="solid 2px green";
+                }
+                else
+                {
+                    exampleInputEmail.style.border="dotted 2px red";
+                };
+            })
+            /*function email(e1)
+            {
+                
+                exampleInputEmail.style.border="none";
+                    document.getElementById("e").style.visibility="hidden";
+                var evalid= /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/i
+                if(!e1.match(evalid))
+                    {
+                        exampleInputEmail.style.border="dotted 2px red";
+                        document.getElementById("e").style.visibility="visible";
+                        return false;
+                    }
+                else 
+                    {
+                        return true;
+                    }
+            }*/
+        
+        var pas2 = document.getElementById("exampleInputPassword");
+            pas2.addEventListener('keyup',function(){
+                if(Password(pas2.value))
+                {
+                    exampleInputPassword.style.border="solid 2px green";
+                    //inputConfirmPassword.style.border="dotted 2px green";
+                }
+                else
+                {
+                    exampleInputPassword.style.border="dotted 2px red";
+                    //inputConfirmPassword.style.border="dotted 2px red";
+                };
+            })
+        
+            function Password(p1)
+            {
+                    exampleInputPassword.style.border="none";
+
+                    document.getElementById("pvalid").style.visibility="hidden";
+                
+                var pass= /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[@\-\!\#\$\&\%\.\*])[a-zA-Z\d@\-\!\#\$\&\%\.\*][^\s]{4,15}$/i
+                
+                if(!p1.match(pass))
+                    {
+                        document.getElementById("pvalid").style.visibility="visible";
+                        return false;
+                    }
+                else
+                    {
+                        return true;
+                    }
+            }
+    </script>
+</body>
+</html>

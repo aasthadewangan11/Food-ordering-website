@@ -1,0 +1,209 @@
+*{
+    margin: 0px;
+}
+body{
+    font-size: 24px;
+    color: white;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    background: linear-gradient( rgba(0,0,0,0.75),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0.45))
+}
+.flex-header{
+    background-color: black;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    font-size: 30px;    
+}
+.flex-header ul{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    list-style-type: none;   
+}
+.flex-header ul li:hover{
+    background-color: dimgrey;
+}
+.flex-header a { 
+    text-decoration: none;
+    color: white;
+    margin: 20px ;
+    text-align: center;
+    flex: auto;
+}
+    
+.flex-header a:hover{ color:#9d0404;}
+
+.flex-art{
+    flex: 3 3;
+    order: 2;
+    background-color: black;
+}
+.flex-main{
+    display: flex;
+    flex: 1;
+}
+.flex-art h2{
+    
+    color: wheat;
+    font-style: oblique;
+    font-size: 50px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.flex-art #slider {
+    width: 1200px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.flex-art #slider .slides {
+    display: block;
+    width: 6000px;
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-art #slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 1200px;
+    height: 500px;
+}
+
+/* helper css, since we don't have images */
+.flex-art .slide1 {
+    background:linear-gradient( rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0),rgba(0,0,0,0.5)), url("https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg");
+    background-size: cover;}
+.flex-art .slide2 {background:linear-gradient( rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0),rgba(0,0,0,0.5)), url(food.jpg);
+    background-size: cover;}
+.flex-art .slide3 {background:linear-gradient( rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0),rgba(0,0,0,0.5)), url("https://scx2.b-cdn.net/gfx/news/hires/2016/howcuttingdo.jpg");
+    background-size: cover;}
+.flex-art .slide4 {background:linear-gradient( rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0),rgba(0,0,0,0.5)), url("https://cdn3.tmbi.com/toh/GoogleImagesPostCard/Fish-Taco-Bites_exps143738_THCA2916394C09_26_5bC_RMS.jpg");
+    background-size: cover;}
+.flex-art .slide5 {background:linear-gradient( rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0),rgba(0,0,0,0.5)), url("https://www.clubchefman.com/upload/recipe-images/crepe303-1000x600.jpg");
+    background-size: cover;}
+
+
+.flex-art p{
+    background:linear-gradient( rgba(0,0,0,0.75),rgba(0,0,0,0.75),rgba(0,0,0,0.85),rgba(0,0,0,0.45)), url(article.jpg);
+    background-size: cover;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+}
+.flex-art h2:hover{ color: darkturquoise;}
+
+.flex-art #bg{
+    background: linear-gradient(#fe1ebe,#f87dd5,#fba2e1,#f5c9e9,#ffffff);
+    background-size: cover;
+    
+}
+.flex-art blockquote{
+    display: none;
+    color: black;
+    font-size: 40px;
+    font-family: "Georgia";
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.flex-art blockquote:first-of-type{
+    display: block;
+}
+.flex-aside{
+    display: flex;
+    justify-content: space-around;
+    order: 3;
+    align-self: stretch;
+    flex-flow: column wrap;
+    justify-content: center;
+    flex-flow: column wrap;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    flex: 0.5 2 5rem;    
+    background:linear-gradient( rgba(0,0,0,0.65),rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.45)), url(food.jpg);
+    background-size: cover;
+}
+
+.flex-aside a{ 
+    text-decoration: overline;
+    color: white;
+    margin: 20px ;
+    text-align: center;    
+}
+    
+.flex-aside a:hover{ color:lawngreen;}
+
+.flex-footer{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column wrap;
+    order: 1;
+    background: linear-gradient( rgba(0,0,0,0),rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.45)), url(sidebar.jpg);
+    background-size: cover;
+}
+.flex-news{
+    display: flex;
+    flex: 1;
+    background-color: black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+}
+.t{
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    background-color: royalblue;
+}
+.t h2{    
+    text-align: center;
+    color: blanchedalmond;
+}
+.news1{
+    
+    border: solid 3px white;
+}
+.news2{
+    
+    border: solid 3px white;
+}
+
+.news1 a{ 
+    text-decoration: none;
+    color: aqua;
+    margin: 20px ;
+    text-align: center;
+    
+}
+.news1 p{
+    color: blanchedalmond;
+    font-size: 20px;
+}
+.news2 p{
+    color: blanchedalmond;
+    font-size: 20px;
+}
+
+.news2 a{ 
+    text-decoration: none;
+    color: aqua;
+    margin: 20px ;
+    text-align: center;  
+}
+@media screen and (min-width:1200px){
+    .body{
+        width: 80%;
+}
+}
+@media screen and (max-width:600px){
+    .body{
+        width: 40%;
+}
+}

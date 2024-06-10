@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Register</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Rubik:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <style type="text/css">
+
+            * {
+                font-family: 'Inter', sans-serif;
+                font-family: 'Rubik', sans-serif;
+            }
+
+            .one {
+                font-family: Georgia;
+                filter: blur(0px);
+                -webkit-filter: blur(0px);
+                letter-spacing: 2px;
+                font-weight: bold;
+                
+                background: linear-gradient( rgba(0,0,0,1),rgba(0,0,0,0.5),rgba(0,0,0,0),rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1569396116180-7fe09fa16dd8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTM2fHxjb2Rpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60") no-repeat center center fixed;
+                background-size: cover;
+                background-blend-mode: overlay;
+  
+            }
+
+            .inline-label { 
+    white-space: nowrap;
+    max-width: 450px;
+    margin-left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float:right;     
+    }
+            
+            .two {
+                width: 280px;
+                margin-left: 250px;
+                text-align: center;
+            }
+            
+        </style>
+        
+    </head>
+
+    <body>
+        
+        <div class="container-fluid">
+            <div class="row justify-content-center one">
+                <div class="col-lg-7">
+
+                    <div class="card border-primary shadow-lg rounded-lg mt-2" style="width: 50rem; background-color: #DCDCDC">
+                        <div class="card-header"><h2 class="text-center mt-2 mb-2">Create Account</h2></div>
+                            <div class="card-body">
+                                <form action="userinfo.php" method="post">
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="large mb-1" for="inputFirstName"><h5 class="font-weight-normal">First Name</h5></label>
+                                                <input class="form-control py-4" id="inputFirstName" type="text" placeholder="Enter first name" name="firstname" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="large mb-1" for="inputLastName"><h5 class="font-weight-normal">Last Name</h5></label>
+                                                <input class="form-control py-4" id="inputLastName" type="text" placeholder="Enter last name" name="lastname" required>
+                                            </div>
+                                        </div>
+                                        <label id="name" style="color: red; visibility: hidden;">Name should consist of only alphabets and atleast 3 Alphabets!</label>
+                                    </div>
+
+
+                                    <div class="form-row">
+                                    <div class="col-md-6">
+                                    <div class="form-group pb-3">
+                                        <label class="large mb-1" for="inputState"><h5 class="font-weight-normal">Gender</h5></label>
+                                        <select id="inputState" class="form-control" style="min-height:50px;" name="gender" required>
+                                        <option value="Select" selected>Select</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Others">Others</option>
+                                        </select>
+                                    </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                                <label class="large mb-1" for="inputLastName"><h5 class="font-weight-normal">Date of Birth</h5></label>
+                                                <input class="form-control py-4" type="Date" placeholder="Enter last name" name="dob" min="1988-01-01" max="2015-12-31" style="width: 85%" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--<form class="form-inline">--->
+                                    <div class="form-group pb-1">
+                                        <label class="large mb-1" for="inputContact"><h5 class="font-weight-normal">Contact Number</h5></label>
+                                        <div class="form-group form-inline">
+                                        <input class="form-control py-4" id="inputContact" type="tel" placeholder="Enter contact number" maxlength="10" style="width: 50%" name="contact" required><label id="c" class="inline-label" style="color: red; visibility: hidden;"> Enter 10 digit phone number!</label>
+                                        </div>
+                                    </div>
+                                <!--</form>--->
+                                    
+                                    <div class="form-group pb-1">
+                                        <label class="large mb-1" for="inputEmailAddress"><h5 class="font-weight-normal">Email</h5></label>
+                                        <div class="form-group form-inline">
+                                        <input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address" style="width: 50%" name="email" required><label id="e" class="inline-label" style="color: red; visibility: hidden;"> Example : <i> &nbsp;demo@domain.com</i></label>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="large mb-1" for="inputPassword">
+                                                <h5 class="font-weight-normal" onmouseover="constraints()">Password</h5></label>
+                                                <input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" maxlength="15" name="password" required >
+                                                
+                                            </div>
+                                            <progress max="100" value="0" id="strength" style="width: 250px"></progress>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="small mb-1" for="inputConfirmPassword">
+                                                <h5 class="font-weight-normal">Confirm Password</h5></label>
+                                                <input class="form-control py-4" id="inputConfirmPassword" type="password" placeholder="Confirm password" maxlength="15" name="confirmp" required>
+                                            </div>
+                                        </div>
+                                        <label id="pdiff" style="color: red; visibility: hidden;"> Enter same password for both fields !</label>
+                                        
+                                         <label id="pvalid" style="color: red; visibility: hidden;"> Password must contain atleast one Uppercase, Lowercase, Digit, Special Characters excluding Spaces.<br> Password length atleast 5 for both fields !  </label>
+                                        
+                                        
+                                    </div>
+                                    <div class="form-group mt-2 ml-4 mr-4 mb-0 pb-2"><button class="btn btn-secondary font-weight-bold text-light btn-block" type="submit"><h5><b>Create Account</b></h5></button></div>
+                                </form>
+                            </div>
+                            
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <script type="text/javascript">
+            
+            function constraints() {
+                
+                  alert("Password must contain:\n1. Atleast 1 Uppercase Letter.\n2. Atleast 1 Lowercase letter.\n3. Atleast 1 Digit.\n4. Any Special Character: !@#$%&*-.\n5. No spaces allowed.\n6. Length: 5-15.");
+                }
+
+            var n1 = document.getElementById("inputFirstName");
+            var n2 = document.getElementById("inputLastName");
+            n1.addEventListener('keyup',function(){
+                if(nvalid(n1.value))
+                {
+                    inputFirstName.style.border="solid 2px green";
+                    //inputConfirmPassword.style.border="dotted 2px green";
+                }
+                else
+                {
+                    inputFirstName.style.border="dotted 2px red";
+                    //inputConfirmPassword.style.border="dotted 2px red";
+                };
+            })
+            n2.addEventListener('keyup',function(){
+                if(nvalid(n2.value))
+                {
+                    inputFirstName.style.border="solid 2px green";
+                    inputLastName.style.border="solid 2px green";
+                    
+                }
+                else
+                {
+                    inputLastName.style.border="dotted 2px red";
+                    
+                };
+            })
+            
+            function nvalid(n)
+            {
+                    inputFirstName.style.border="none";
+                    inputLastName.style.border="none";
+                    document.getElementById("name").style.visibility="hidden";
+                
+                var name= /^[a-z]+[^\s][^\d]$/i
+                
+                if(!n.match(name))
+                    {
+                        //alert("Password must contain atleast one Uppercase, Lowercase, Digit, Special Characters excluding Spaces.");
+                         //inputPassword.style.border="dotted 2px red";
+                       //inputConfirmPassword.style.border="dotted 2px red";
+                        document.getElementById("name").style.visibility="visible";
+                        return false;
+                    }
+                else
+                    {
+                        return true;
+                    }
+            }
+             var c1 = document.getElementById("inputContact");
+            c1.addEventListener('keyup',function(){
+                if(cn(c1.value))
+                {
+                    inputContact.style.border="solid 2px green";
+                }
+                else
+                {
+                    inputContact.style.border="dotted 2px red";
+                };
+            })
+            function cn(c1)
+            {
+                inputContact.style.border="none";
+                    document.getElementById("c").style.visibility="hidden";
+                var cvalid= /^[7-9]\d{9}$/i
+                if(!c1.match(cvalid))
+                    {
+                        inputContact.style.border="dotted 2px red";
+                        document.getElementById("c").style.visibility="visible";
+                        return false;
+                    }
+                else 
+                    {
+                        return true;
+                    }
+            }
+            var e1 = document.getElementById("inputEmailAddress");
+            e1.addEventListener('keyup',function(){
+                if(email(e1.value))
+                {
+                    inputEmailAddress.style.border="solid 2px green";
+                }
+                else
+                {
+                    inputEmailAddress.style.border="dotted 2px red";
+                };
+            })
+            function email(e1)
+            {
+                
+                inputEmailAddress.style.border="none";
+                    document.getElementById("e").style.visibility="hidden";
+                var evalid= /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/i
+                if(!e1.match(evalid))
+                    {
+                        inputEmailAddress.style.border="dotted 2px red";
+                        document.getElementById("e").style.visibility="visible";
+                        return false;
+                    }
+                else 
+                    {
+                        return true;
+                    }
+            }
+            
+            var p1s = document.getElementById("inputPassword");
+            p1s.addEventListener('keyup',function(){
+                strength(p1s.value);
+            })
+            function strength(pass)
+            {
+            var strengthbar=document.getElementById("strength");
+            var strength=0;
+            if(pass.match(/[a-zA-Z]/)){
+               strength+=1;
+               }
+            if(pass.match(/[\d]/)){
+                strength+=1;
+            }
+            if (pass.match(/[@\-\!\#\$\&\%\.\*]/)){
+                strength+=1;
+            }
+            if(pass.match(/[^\s]/)){
+                strength+=1;
+            }
+            if(pass.length>=5){
+                strength+=1;
+            }
+                
+            switch(strength){
+                case 0:
+                    strengthbar.value=0;
+                    break;
+                case 1:
+                    strengthbar.value=20;
+                    break;
+                case 2:
+                    strengthbar.value=40;
+                    break;
+                case 3:
+                    strengthbar.value=60;
+                    break;
+                case 4:
+                    strengthbar.value=80;
+                    break;
+                case 5:
+                    strengthbar.value=100;
+                    break;
+            }
+            }
+            
+            var pas1 = document.getElementById("inputPassword");
+            var pas2 = document.getElementById("inputConfirmPassword");
+            pas1.addEventListener('keyup',function(){
+                if(Password(pas1.value,pas2.value))
+                {
+                    inputPassword.style.border="solid 2px green";
+                    //inputConfirmPassword.style.border="dotted 2px green";
+                }
+                else
+                {
+                    inputPassword.style.border="dotted 2px red";
+                    //inputConfirmPassword.style.border="dotted 2px red";
+                };
+            })
+            pas2.addEventListener('keyup',function(){
+                if(Pass(pas1.value,pas2.value))
+                {
+                    inputPassword.style.border="solid 2px green";
+                    inputConfirmPassword.style.border="solid 2px green";
+                }
+
+                else
+                {
+                    //inputPassword.style.border="dotted 2px red";
+                    inputConfirmPassword.style.border="dotted 2px red";
+                };
+            })
+            function Password(p1,p2)
+            {
+                    inputPassword.style.border="none";
+                    inputConfirmPassword.style.border="none";
+                    //document.getElementById("pdiff").style.visibility="hidden";
+                    
+                    document.getElementById("pvalid").style.visibility="hidden";
+
+                    
+                var pass= /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[@\-\!\#\$\&\%\.\*])[a-zA-Z\d@\-\!\#\$\&\%\.\*][^\s]{4,15}$/i
+                
+                if(!p1.match(pass))
+                    {
+                        document.getElementById("pvalid").style.visibility="visible";
+                        return false;
+                    }  
+                else
+                    {
+                        return true;
+                    }
+
+            }
+            
+
+            function Pass(p1,p2) {
+
+                inputPassword.style.border="none";
+                    inputConfirmPassword.style.border="none";
+                    document.getElementById("pdiff").style.visibility="hidden";
+                    
+                    //document.getElementById("pvalid").style.visibility="hidden";
+
+                if(p1!=p2)
+                   {
+                       
+                       document.getElementById("pdiff").style.visibility="visible";
+                       return false;
+                   }
+                
+                else
+                    {
+                        return true;
+                    }
+
+
+            }
+
+
+            function created()
+            {
+                if(email(e1.value)==true & Password(pas1.value,pas2.value)==true)
+                    {
+                    alert("Account created successfully!");
+                    return true;
+                    }
+                else
+                    return false;
+            }
+        </script>
+    </body>
+</html>
